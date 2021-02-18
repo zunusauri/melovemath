@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #2a3a49;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container,
+.menu-click {
+    height: 140px;
+    width: 160px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.menu-click {
+    z-index: 2;
+    transform: scale(0.9);
+}
+
+.toggle {
+    height: 0;
+    width: 80px;
+    border-bottom: 70px solid #f9d230;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+
+}
+
+.toggle::before {
+    content: '';
+    height: 0;
+    width: 80px;
+    border-top: 70px solid #f9d230;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    position: absolute;
+    top: 70px;
+    left: -40px;
+}
+
+.item {
+    height: 0;
+    width: 80px;
+    border-bottom: 70px solid #ffffff;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    position: absolute;
+    top: 0;
+    transition: 1s;
+
+}
+
+.item::before {
+    content: '';
+    height: 0;
+    width: 80px;
+    border-top: 70px solid #ffffff;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    position: absolute;
+    top: 70px;
+    left: -40px;
+}
+
+#add {
+    font-size: 100px;
+    color: white;
+    position: relative;
+    top: 20px;
+    right: 10px;
+    transition: 1s;
+
+}
+
+a .material-icons {
+    color: #d2d2d2;
+    font-size: 60px;
+}
+
+a {
+    position: relative;
+    top: 40px;
+    left: 10px;
+}
+
+a>.material-icons:hover {
+    color: #f9d230;
+    transform: scale(1.3);
+}
+
+.contain {
+    position: relative;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.contain .card {
+    position: relative;
+    width: 250px;
+    background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.contain .card-transformasi {
+    position: relative;
+    width: 200px;
+    background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.contain .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.contain .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .03);
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+
+.percent .material-icons {
+    position: relative;
+    font-size: 150px;
+    color: #fff;
+}
+
+.text {
+    position: relative;
+    color: #777;
+    margin: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.card:hover .text {
+    color: #fff;
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: #2a3a49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+}
+
+.glass {
+    background: white;
+    min-height: 90vh;
+    width: 60%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    border-radius: 2rem;
+    display: grid;
+}
+
+.contents {
+    display: grid;
+    min-height: 0;
+    margin-bottom: 1rem;
+}
+
+
+.container-contents-overflow {
+    overflow: auto;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #5ECBEB);
+    border-radius: 5px;
+}
+
+/* STYLING MATERI */
+
+.materi {
+    margin: 1rem 2rem;
+
+}
+
+.materi h1 {
+    padding-top: 1rem;
+}
+
+.materi h2 {
+    margin-top: 1rem;
+}
+
+.materi img {
+    text-align: center;
+    margin-top: 1rem;
+    width: 70%;
+}
+
+.materi .motif {
+    text-align: center;
+    margin-top: 1rem;
+    width: 30%;
+}
+
+.materi .rumus {
+    text-align: center;
+    margin-top: 1rem;
+    width: 20%;
+}
+
+.materi p {
+    margin: 1rem;
+
+    text-align: justify;
+    text-indent: 3rem;
+    font-size: 20px;
+}
+
+.box-tombol {
+    display: flex;
+}
+
+/* STYILING TOMBOL */
+
+.area-tombol {
+    position: relative;
+    display: grid;
+    width: 100%;
+}
+
+.kembali {
+    justify-items: start;
+}
+
+.lanjut {
+    justify-items: end;
+}
+
+.tombol {
+    position: relative;
+    display: grid;
+    padding: 0.8rem 2rem;
+    margin: 1rem 0 0 0;
+    background: #2a3a49;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    align-items: center;
+    justify-items: center;
+}
