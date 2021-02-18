@@ -228,6 +228,11 @@ main {
 
 }
 
+.materi .atas {
+    display: flex;
+    flex-direction: row;
+}
+
 .materi h1 {
     padding-top: 1rem;
 }
